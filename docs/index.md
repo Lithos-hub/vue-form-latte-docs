@@ -8,10 +8,13 @@ hero:
   name: Vue Form Latte
   text: A form generator library
   tagline: Simple, powerful, and performant. Your form generator library.
+  image:
+    src: /logo.png
+    alt: Vue Form Latte logo
   actions:
     - theme: brand
       text: Get Started
-      link: /docs
+      link: /guide/getting-started
     - theme: alt
       text: View on GitHub
       link: https://github.com/Lithos-hub/vue-form-latte
@@ -28,7 +31,7 @@ features:
     details: Use your own Vue components to customize the look and feel of your forms.
   - icon: <svg width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title>file_type_tailwind</title><path d="M9,13.7q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q11.1,10.9,9,13.7ZM2,22.1q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q4.1,19.3,2,22.1Z" style="fill:#44a8b3"/></svg>
     title: Tailwind CSS
-    details: Fast initial load with static HTML, fast post-load navigation with client-side routing.
+    details: Customize the look and feel of your forms with Tailwind CSS.
 ---
 
 <style>
@@ -38,6 +41,8 @@ features:
 
   --vp-home-hero-image-background-image: linear-gradient(-45deg, #41B883 50%, #34495E 50%);
   --vp-home-hero-image-filter: blur(44px);
+
+  --vp-home-hero-actions-after: -webkit-linear-gradient(120deg, #41B883 20%, #34495E);
 }
 
 @media (min-width: 640px) {
