@@ -11,6 +11,11 @@ export default defineConfig({
       { text: "Config", link: "/config/" },
       { text: "API", link: "/api/" },
       { text: "Changelog", link: "/changelog/" },
+      // Github icon
+      {
+        text: 'GitHub',
+        link: 'https://github.com/Lithos-hub/vue-form-latte',
+      },
     ],
     sidebar: [
       {

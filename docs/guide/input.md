@@ -12,7 +12,7 @@ The `input` component is a simple text input. It's a wrapper around the native `
 ### Basic input
 
 <section class="p-5">
-    <VueFormLatte :components="components" />
+    <VueFormLatte :components="basicInput" />
 </section>
 
 ```vue
@@ -45,6 +45,18 @@ const components = [
 
 <script setup>
 import { VueFormLatte } from 'vue-form-latte'
+
+const basicInput = [
+  {
+    componentType: "input",
+    props: {
+      name: "name",
+      initialValue: "",
+      label: "Input label",
+      placeholder: "Write something here",
+    },
+  },
+];
 
 const components = [
     {
