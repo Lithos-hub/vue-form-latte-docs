@@ -8,18 +8,20 @@ Install the package with `npm`:
 npm install vue-form-latte
 ```
 
-In addition, if you want to apply validations, you need to install the `yup` package:
+The library also includes the following utilities:
 
-```bash
-npm install yup
-```
+- [Yup](https://www.npmjs.com/package/yup): A JavaScript schema builder for value parsing and validation.
+- [Vue](https://vuejs.org/): A progressive framework for building user interfaces.
+- [Tailwind CSS](https://tailwindcss.com/): A utility-first CSS framework for rapidly building custom designs.
+- [Flowbite](https://flowbite.com/): An open-source Tailwind CSS components and templates library.
+- [@heroicons/vue](https://www.npmjs.com/package/@heroicons/vue/): A set of free MIT-licensed high-quality SVG icons for you to use in your web projects.
 
 ## Usage
 
-Then, import the packages where you want to use it:
+Then, import the packages where you want to use it. It is recommended to import the `IVueFormLatte` interface to type the components array:
 
 ```javascript
-import { VueFormLatte } from "vue-form-latte";
+import { VueFormLatte, IVueFormLatte } from "vue-form-latte";
 import * as yup from "yup";
 ```
 
@@ -31,7 +33,7 @@ Now, you can use the `VueFormLatte` component in your Vue application:
 </template>
 
 <script setup lang="ts">
-import { VueFormLatte } from "vue-form-latte";
+import { VueFormLatte, IVueFormLatte } from "vue-form-latte";
 import * as yup from "yup";
 
 const schema = yup.object().shape({
@@ -40,11 +42,12 @@ const schema = yup.object().shape({
   age: yup.number().required().positive().integer(),
 });
 
-const components = [
+const components: IVueFormLatte[] = [
     {
         componentType: "input",
         props: {
             name: "name",
+            placeholder: "Write your name here",
             initialValue: "",
         }
     },
@@ -52,6 +55,7 @@ const components = [
         componentType: "input",
         props: {
             name: "email",
+            type: "email",
             initialValue: "",
         }
     },
@@ -60,7 +64,7 @@ const components = [
         props: {
             name: "age",
             type: "number",
-            initialValue: "",
+            initialValue: 23,
         }
     }
 ]

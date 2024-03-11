@@ -90,10 +90,10 @@ const components = [
         componentType: "input",
         props: {
             name: "name",
-            initialValue: "This is a default value",
+            initialValue: "",
             label: "Input label",
             placeholder: "Write something here",
-            customStyles: "bg-blue-900 outline outline- text-cyan-500 p-3 rounded-md"
+            customStyles: "bg-[#202020] outline text-red-500 p-3 rounded-0 transition-all"
         }
     },
 ]
@@ -115,7 +115,8 @@ const components = [
       initialValue: "This is a default value",
       label: "Input label",
       placeholder: "Write something here",
-      customStyles: "bg-blue-900 outline outline- text-cyan-500 p-3 rounded-md",
+      customStyles:
+        "bg-[#202020] outline text-red-500 p-3 rounded-0 transition-all",
     },
   },
 ];
