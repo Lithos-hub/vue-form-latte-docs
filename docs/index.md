@@ -7,7 +7,7 @@ titleTemplate: Vue Form Generator
 hero:
   name: Vue Form Latte
   text: A form generator library
-  tagline: Simple, powerful, and performant. Your form generator library.
+  tagline: Simple, powerful, and performant. Your form generator library for Vue 3
   image:
     src: /logo.png
     alt: Vue Form Latte logo

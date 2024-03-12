@@ -26,7 +26,7 @@ const schema = yup.object().shape({
 
 - **`validateOnSubmit`** (boolean, optional): A boolean to set if the form should be validated on submit. Default is `true`.
 
-Check the interface for the `components` prop to see the props:
+Check the interface below:
 
 ```typescript
 export interface VueFormLatteProps {
@@ -38,29 +38,29 @@ export interface VueFormLatteProps {
 }
 ```
 
-# Nested props
+## VueFormLatteProps
 
-## `components`
+### `components - VueFormLatteItem`
 
-The `components` prop is an array of objects with the following structure:
+The `components` prop is an array of objects with the following structure corresponding to the `VueFormLatteItem` interface:
 
-- **`componentType`** (string, required): The type of the component. It should be a string with the type of the component.
+- **`componentType`** (string, optional): It must be a string with the type of the component. **If you don't use the `customComponent` property, you should provide this property. Otherwise, you can avoid this prop and use the `customComponent` instead**.
 - **`props`** (object, required): The props of the component. This object should contain the props of the component.
 - **`customComponent`** (unknown, optional): A custom component to use in the form. If provided, it will be used instead of the default component.
 - **`colspan`** (number | string, optional): A number or string to set the colspan of the component. If provided, it will be used to set the colspan of the component.
 
-Check the interface for the `components` prop to see the props:
+Check the interface below:
 
 ```typescript
 export interface VueFormLatteItem {
-  componentType: ComponentType;
   props: FormComponentProps[ComponentType];
+  componentType?: ComponentType;
   customComponent?: unknown;
   colspan?: number | string;
 }
 ```
 
-## `componentType`
+### `componentType`
 
 The `componentType` is used to render a specific component in the form. It should be one of the following names of the components:
 
@@ -71,3 +71,181 @@ The `componentType` is used to render a specific component in the form. It shoul
 - **`radio`**
 - **`checkbox`**
 - **`slider`**
+
+### `props`
+
+Depending on the `componentType`, the `props` object should contain the props of the component. To ensure the correct props, you can use the `FormComponentProps` interface casting the `props` object:
+
+```typescript
+import { FormComponentProps } from "vue-form-latte";
+
+const components: VueFormLatteItem[] = [
+  {
+    componentType: "input",
+    props: {
+      name: "name"
+      initialValue: "",
+    },
+  } as FormComponentProps["input"], // Put his line to ensure the correct props
+];
+```
+
+### `customComponent`
+
+The `customComponent` is an unknown type that can be used to render a custom component in the form. If provided, it will be used instead of the default component. You can use it to render a custom component in the form. See the example below:
+
+```typescript
+import MyCustomTextarea from "./MyCustomTextarea.vue";
+
+const components: VueFormLatteItem[] = [
+  {
+    customComponent: MyCustomTextarea,
+    props: {
+      name: "name"
+      initialValue: "",
+    } as FormComponentProps["textarea"],
+  },
+];
+```
+
+### `colspan`
+
+The `colspan` prop allows you to set the colspan of the component. It can be a number or a string. If provided, it will be used to set the colspan of the component. See the example below:
+
+```typescript
+const colspanExample = [
+  {
+    componentType: "input",
+    props: {
+      name: "firstInput",
+      initialValue: "",
+      placeholder: "First input",
+      disabled: true,
+    },
+    colspan: 2,
+  },
+  {
+    componentType: "input",
+    props: {
+      name: "secondInput",
+      initialValue: "",
+      placeholder: "Second input",
+      disabled: true,
+    },
+    colspan: 10,
+  },
+  {
+    componentType: "input",
+    props: {
+      name: "thirdInput",
+      initialValue: "",
+      placeholder: "Third input",
+      disabled: true,
+    },
+    colspan: 4,
+  },
+  {
+    componentType: "input",
+    props: {
+      name: "fourthInput",
+      initialValue: "",
+      placeholder: "Fourth input",
+      disabled: true,
+    },
+    colspan: 8,
+  },
+  {
+    componentType: "input",
+    props: {
+      name: "fifthInput",
+      initialValue: "",
+      placeholder: "Fifth input",
+      disabled: true,
+    },
+    colspan: 6,
+  },
+  {
+    componentType: "input",
+    props: {
+      name: "sixthInput",
+      initialValue: "",
+      placeholder: "Sixth input",
+      disabled: true,
+    },
+    colspan: 6,
+  },
+];
+```
+
+See the result below:
+
+<div class="p-5">
+  <VueFormLatte format="grid" :components="colspanExample" />
+</div>
+
+<script setup lang="ts">
+import { VueFormLatte } from "vue-form-latte";
+
+const colspanExample = [
+  {
+    componentType: "input",
+    props: {
+      name: "firstInput",
+      initialValue: "",
+      placeholder: "First input",
+      disabled: true,
+    },
+    colspan: 2,
+  },
+  {
+    componentType: "input",
+    props: {
+      name: "secondInput",
+      initialValue: "",
+      placeholder: "Second input",
+      disabled: true,
+    },
+    colspan: 10,
+  },
+  {
+    componentType: "input",
+    props: {
+      name: "thirdInput",
+      initialValue: "",
+      placeholder: "Third input",
+      disabled: true,
+    },
+    colspan: 4,
+  },
+  {
+    componentType: "input",
+    props: {
+      name: "fourthInput",
+      initialValue: "",
+      placeholder: "Fourth input",
+      disabled: true,
+    },
+    colspan: 8,
+  },
+  {
+    componentType: "input",
+    props: {
+      name: "fifthInput",
+      initialValue: "",
+      placeholder: "Fifth input",
+      disabled: true,
+    },
+    colspan: 6,
+  },
+  {
+    componentType: "input",
+    props: {
+      name: "sixthInput",
+      initialValue: "",
+      placeholder: "Sixth input",
+      disabled: true,
+    },
+    colspan: 6,
+  }
+];
+</script>
