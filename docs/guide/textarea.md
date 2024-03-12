@@ -1,23 +1,23 @@
-# Input
+# Textarea
 
-The `input` component is a simple text input. It's a wrapper around the native `input` element, so it supports all the same attributes and events. In addition, it supports the following props:
+The `textarea` component is used to create a textarea input in the form. It is used to collect long-form text from the user. It's a wrapper around the native `textarea` element, so it supports all the same attributes and events. In addition, it supports the following props:
 
-- `name` (string, required): The name of the input. This is used to identify the input in the form's state.
-- `initialValue` (string, optional): The initial value of the input. If not provided, the input will be empty.
-- `customStyles` (string, optional): Put here your CSS classes to customize the input. You can use Tailwind CSS classes or your own classes.
-- `label` (string, optional): The label of the input. If not provided, the input will not have a label.
+- `name` (string, required): The name of the textarea. This is used to identify the textarea in the form's state.
+- `initialValue` (string, optional): The initial value of the textarea. If not provided, the textarea will be empty.
+- `customStyles` (string, optional): Put here your CSS classes to customize the textarea. You can use Tailwind CSS classes or your own classes.
+- `label` (string, optional): The label of the textarea. If not provided, the textarea will not have a label.
 
 ## Usage
 
-In order to use the `input` component, create an array of objects with the following structure:
+In order to use the `textarea` component, create an array of objects with the following structure:
 
-- **componentType** (string, required): The type of the component. In this case, it should be `input`.
+- **componentType** (string, required): The type of the component. In this case, it should be `textarea`.
 - **props** (object, required): The props of the component. This object should contain the `name` prop, so the input can be identified in the form's state. Also, you must provide the `initialValue` prop, so the input can have an initial value.
 
 ```javascript
 const components = [
   {
-    componentType: "input",
+    componentType: "textarea",
     props: {
       name: "name",
       initialValue: "",
@@ -34,29 +34,12 @@ Then, pass the `components` array to the `VueFormLatte` component:
 </template>
 ```
 
-## TypeScript
-
-This is the type of the `input` component props:
-
-```typescript
-import type { InputHTMLAttributes } from "vue";
-
-export interface BaseInputProps extends /* @vue-ignore */ InputHTMLAttributes {
-  modelValue: string | number;
-  name: string;
-  customStyles?: string;
-  label?: string;
-}
-```
-
-Note that the `modelValue` prop is required, but it's not necessary to provide it, as it's automatically added by the `defineModel` macro used in the component. Instead, you should provide the `initialValue` prop.
-
 ## Examples
 
-### Basic input
+### Basic textarea
 
 <section class="p-5">
-    <VueFormLatte :components="basicInput" />
+    <VueFormLatte :components="basicTextarea" />
 </section>
 
 ```vue
@@ -69,11 +52,11 @@ import { VueFormLatte } from "vue-form-latte";
 
 const components = [
   {
-    componentType: "input",
+    componentType: "textarea",
     props: {
       name: "name",
       initialValue: "",
-      label: "Input label",
+      label: "Textarea label",
       placeholder: "Write something here",
     },
   },
@@ -90,13 +73,13 @@ const components = [
 <script setup>
 import { VueFormLatte } from 'vue-form-latte'
 
-const basicInput = [
+const basicTextarea = [
   {
-    componentType: "input",
+    componentType: "textarea",
     props: {
       name: "name",
       initialValue: "",
-      label: "Input label",
+      label: "Textarea label",
       placeholder: "Write something here",
     },
   },
@@ -104,11 +87,11 @@ const basicInput = [
 
 const components = [
     {
-        componentType: "input",
+        componentType: "textarea",
         props: {
             name: "name",
             initialValue: "",
-            label: "Input label",
+            label: "Textarea label",
             placeholder: "Write something here",
             customStyles: "bg-[#202020] outline text-red-500 p-3 rounded-0 transition-all"
         }

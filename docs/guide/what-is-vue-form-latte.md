@@ -2,6 +2,16 @@
 
 Vue Form Latte is a form generator library for Vue 3. It's simple, powerful, and performant. It's designed to be easy to use and to provide a great developer experience.
 
+The component `<VueFormLatte />` is the main component of the library. It creates forms with different types of inputs, such as:
+
+- **input**
+- **textarea**
+- **select**
+- **multiselect**
+- **radio**
+- **checkbox**
+- **slider**
+
 ## Use cases
 
 - **Powered by TypeScript**:
