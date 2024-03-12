@@ -5,8 +5,8 @@ The `VueFormLatte` component accepts the following props:
 - **`components`** (array, required): An array of objects with the structure of the components you want to use in the form. Each object should contain the `componentType` and `props` properties. The `componentType` should be a string with the type of the component, and the `props` should be an object with the props of the component.
 - **`dark`** (boolean, optional): A boolean to set the dark mode of the form. Default is `false`.
 - **`format`** (string, optional): A string to set the format of the form. It accepts the following values:
-  - **`grid`** (By default): The form will be displayed in a grid format.
-  - **`column`**: The form will be displayed in a column format.
+  - **`grid`**: The form will be displayed in a grid format.
+  - **`column`** (By default): The form will be displayed in a column format.
 - **`schema`** (object, optional): An object with the schema of the form using `yup` library.
 
 Example of a schema using `yup`:
@@ -110,9 +110,16 @@ const components: VueFormLatteItem[] = [
 
 ### `colspan`
 
-The `colspan` prop allows you to set the colspan of the component. It can be a number or a string. If provided, it will be used to set the colspan of the component. See the example below:
+The `colspan` prop allows you to set the colspan of the component. It can be a number or a string. If provided, it will be used to set the colspan of the component. To see effects of the `colspan` prop, you should use the `format` prop with the value `grid`.
 
-```typescript
+See the example below:
+
+```vue
+<template>
+  <VueFormLatte format="grid" :components="colspanExample" />
+</template>
+
+<script setup lang="ts">
 const colspanExample = [
   {
     componentType: "input",
@@ -175,6 +182,7 @@ const colspanExample = [
     colspan: 6,
   },
 ];
+</script>
 ```
 
 See the result below:
