@@ -62,6 +62,7 @@ function sidebar(): DefaultTheme.SidebarItem[] {
       text: "API",
       items: [
         { text: "Props", link: "/guide/api/props" },
+        { text: "Exposed bindings", link: "/guide/api/exposed-bindings" },
       ],
     },
     {

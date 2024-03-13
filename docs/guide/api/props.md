@@ -110,7 +110,7 @@ const components: VueFormLatteItem[] = [
 
 ### `colspan`
 
-The `colspan` prop allows you to set the colspan of the component. It can be a number or a string. If provided, it will be used to set the colspan of the component. To see effects of the `colspan` prop, you should use the `format` prop with the value `grid`.
+The `colspan` prop allows you to set the colspan of the component. It can be a number or a string. If provided, it will be used to set the colspan of the component. **To see effects of the `colspan` prop, you should use the `format` prop with the value `grid`**.
 
 See the example below:
 
