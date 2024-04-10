@@ -10,10 +10,13 @@
   },
   "dependencies": {
     "vue": "^3.4.19",
-    "vue-form-latte": "^0.1.31"
+    "vue-form-latte": "0.1.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
     "typescript": "^5.2.2",
     "vite": "^5.1.4",
     "vitepress": "^1.0.0-rc.45",

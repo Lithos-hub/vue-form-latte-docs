@@ -4,9 +4,17 @@ export default defineConfig({
   title: "Vue Form Latte",
   description: "Form generator library for Vue 3",
   head: [
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "https://unpkg.com/tailwindcss@2.0.4/dist/tailwind.min.css",
+      },
+    ],
     ["link", { rel: "icon", href: "/logo.png" }],
     ["meta", { name: "author", content: "Carlos Segura García" }],
-    ["meta",
+    [
+      "meta",
       {
         name: "keywords",
         content:
@@ -14,16 +22,36 @@ export default defineConfig({
       },
     ],
     ["meta", { name: "og:title", content: "Vue Form Latte" }],
-    ["meta", { name: "og:description", content: "Vue Form Latte is a form generator library for Vue 3. It is designed to be a flexible and powerful tool for building forms with Vue 3, TypeScript and Tailwind CSS." }],
+    [
+      "meta",
+      {
+        name: "og:description",
+        content:
+          "Vue Form Latte is a form generator library for Vue 3. It is designed to be a flexible and powerful tool for building forms with Vue 3, TypeScript and Tailwind CSS.",
+      },
+    ],
     ["meta", { name: "og:image", content: "/logo.png" }],
-    ["meta", { name: "og:url", content: "https://github.com/Lithos-hub/vue-form-latte" }],
+    [
+      "meta",
+      {
+        name: "og:url",
+        content: "https://github.com/Lithos-hub/vue-form-latte",
+      },
+    ],
     ["meta", { name: "og:type", content: "website" }],
     ["meta", { name: "og:site_name", content: "Vue Form Latte" }],
     ["meta", { name: "og:locale", content: "en_US" }],
     ["meta", { name: "og:locale:alternate", content: "es_ES" }],
     ["meta", { name: "twitter:card", content: "summary" }],
     ["meta", { name: "twitter:title", content: "Vue Form Latte" }],
-    ["meta", { name: "twitter:description", content: "Vue Form Latte is a form generator library for Vue 3. It is designed to be a flexible and powerful tool for building forms with Vue 3, TypeScript and Tailwind CSS." }],
+    [
+      "meta",
+      {
+        name: "twitter:description",
+        content:
+          "Vue Form Latte is a form generator library for Vue 3. It is designed to be a flexible and powerful tool for building forms with Vue 3, TypeScript and Tailwind CSS.",
+      },
+    ],
     ["meta", { name: "twitter:image", content: "/logo.png" }],
   ],
   themeConfig: {
@@ -68,13 +96,13 @@ function sidebar(): DefaultTheme.SidebarItem[] {
     {
       text: "Components",
       items: [
-        { text: "Input", link: "/guide/input" },
-        { text: "Textarea", link: "/guide/textarea" },
-        { text: "Select", link: "/guide/select" },
-        { text: "Multiselect", link: "/guide/multiselect" },
-        { text: "Radio", link: "/guide/radio" },
-        { text: "Checkbox", link: "/guide/checkbox" },
-        { text: "Slider", link: "/guide/slider" },
+        { text: "Input", link: "/guide/components/input" },
+        { text: "Textarea", link: "/guide/components/textarea" },
+        { text: "Select", link: "/guide/components/select" },
+        { text: "Multiselect", link: "/guide/components/multiselect" },
+        { text: "Radio", link: "/guide/components/radio" },
+        { text: "Checkbox", link: "/guide/components/checkbox" },
+        { text: "Slider", link: "/guide/components/slider" },
       ],
     },
   ];

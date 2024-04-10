@@ -1,55 +1,49 @@
 {
-  "hash": "1b876276",
+  "hash": "8a5eed66",
   "configHash": "46772e75",
-  "lockfileHash": "29f45600",
-  "browserHash": "8099cd78",
+  "lockfileHash": "c6c92601",
+  "browserHash": "cf366164",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "d6922e52",
+      "fileHash": "a5c72520",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "453ede31",
+      "fileHash": "7681e486",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "7b0349d7",
+      "fileHash": "725e225f",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
       "src": "../../../../node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "4e324ae0",
+      "fileHash": "ee0d1e29",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
       "src": "../../../../node_modules/mark.js/src/vanilla.js",
       "file": "vitepress___mark__js_src_vanilla__js.js",
-      "fileHash": "e1c00698",
+      "fileHash": "cf440884",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "13e46731",
+      "fileHash": "2d238493",
       "needsInterop": false
     },
     "@theme/index": {
       "src": "../../../../node_modules/vitepress/dist/client/theme-default/index.js",
       "file": "@theme_index.js",
-      "fileHash": "07793c15",
-      "needsInterop": false
-    },
-    "vue-form-latte": {
-      "src": "../../../../node_modules/vue-form-latte/dist/vue-form-latte.es.js",
-      "file": "vue-form-latte.js",
-      "fileHash": "0a2a6728",
+      "fileHash": "62404828",
       "needsInterop": false
     }
   },
