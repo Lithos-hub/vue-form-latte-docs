@@ -8,7 +8,25 @@ Install the package with `npm`:
 npm install vue-form-latte
 ```
 
-The library also includes the following utilities:
+:::warning
+
+At version `0.1.5`, it is necessary to install Tailwind CSS to be able to correctly customize the components. Follow the instructions on the [Tailwind CSS installation page](https://tailwindcss.com/docs/installation/framework-guides) to install it.
+
+:::
+
+Then you have to put this line in your `main.ts` file:
+
+```typescript
+import "vue-form-latte/styles.css";
+```
+
+If you want to use `yup` for validation, you need to install it as well:
+
+```bash
+npm install yup
+```
+
+The library includes and adds support for the following packages:
 
 - [Yup](https://www.npmjs.com/package/yup): A JavaScript schema builder for value parsing and validation.
 - [Vue](https://vuejs.org/): A progressive framework for building user interfaces.

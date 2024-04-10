@@ -56,4 +56,4 @@ features:
     --vp-home-hero-image-filter: blur(68px);
   }
 }
-</style>
+</styl>

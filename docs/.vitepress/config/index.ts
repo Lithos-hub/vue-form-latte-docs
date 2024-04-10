@@ -4,13 +4,7 @@ export default defineConfig({
   title: "Vue Form Latte",
   description: "Form generator library for Vue 3",
   head: [
-    [
-      "link",
-      {
-        rel: "stylesheet",
-        href: "https://unpkg.com/tailwindcss@2.0.4/dist/tailwind.min.css",
-      },
-    ],
+    ["link", { src: "vue-form-latte/dist/style.css" }],
     ["link", { rel: "icon", href: "/logo.png" }],
     ["meta", { name: "author", content: "Carlos Segura García" }],
     [
