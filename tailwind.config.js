@@ -2,8 +2,7 @@
 export default {
   important: true,
   content: [
-		'./docs/.vitepress/**/*.{js,ts,vue}',
-		'./docs/**/*.md',
+		'./docs/**/*.{js,ts,vue,md}',
   ],
   theme: {
     extend: {},
